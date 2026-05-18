@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Messageboard</title>
+</head>
+<body>
+
+  <h1>Mini Messageboard</h1>
+
+  <a href="/new">Create New Message</a>
+
+  <hr>
+
+  <% messages.forEach((message, index) => { %>
+
+    <h3><%= message.user %></h3>
+
+    <p><%= message.text %></p>
+
+    <small><%= message.added %></small>
+
+    <br><br>
+
+    <a href="/message/<%= index %>">Open</a>
+
+    <hr>
+
+  <% }) %>
+
+</body>
+</html>
