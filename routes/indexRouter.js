@@ -33,4 +33,12 @@ router.post("/new", (req , res) => {
     });
 res.redirect("/");
 });
+router.get("/message/:id",(req,res)=>{
+    const messageId = req.params.id;
+    const message = messages[messageId];
+
+    res.render("message",{
+        message : message
+    });
+});
 module.exports = router;
